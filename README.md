@@ -18,11 +18,13 @@ Install the required packages using the provided `requirements.txt` file:
 ```bash
 pip install -r requirements.txt
 ```
-
 ### `requirements.txt`
 - `jupyterhub`
 - `jupyterlab`
 - `wrapspawner`
+
+### IMPORTANT NOTE
+the target environemnt must also install jupyterhub and jupyterlab!
 
 ## Usage
 

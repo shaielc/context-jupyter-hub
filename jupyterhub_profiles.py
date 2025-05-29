@@ -1,5 +1,6 @@
 import json
 
+
 def dict_to_profile(profile_config):
     """
     Converts a dictionary into the correct ProfilesSpawner format.
@@ -26,7 +27,7 @@ def dict_to_profile(profile_config):
     return (
         profile_config["name"],  # Display name
         profile_config["shortname"],  # Unique key
-        'jupyterhub.spawner.LocalProcessSpawner',  # Spawner class
+        profile_config.get('cls',"jupyterhub.spawner.LocalProcessSpawner"),  # Spawner class
         {'cmd': ['/bin/bash', '-c', cmd]}  # Spawner config dictionary
     )
 
